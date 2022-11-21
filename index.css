@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    width: 600px;
+    margin: 0 auto;
+    border: 2px solid #999;
+    border-radius: 30px;
+    font-family: 'Smythe', cursive;
+}
+
+/* typography */
+
+h2, h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header {
+    padding: 45px;
+    border: 1px solid #282828;
+}
