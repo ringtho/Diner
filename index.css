@@ -4,7 +4,9 @@ body {
     margin: 0 auto;
     border: 2px solid #999;
     border-radius: 30px;
+    color: #282828;
     font-family: 'Smythe', cursive;
+    background-color: whitesmoke;
 }
 
 /* typography */
@@ -14,7 +16,83 @@ h2, h4 {
     margin-bottom: 0;
 }
 
+h2{
+    font-size: 40px;
+}
+
+p {
+    margin-top: 0;
+}
+
+/* layout */
 header {
-    padding: 45px;
-    border: 1px solid #282828;
+    background-image: url("/images/header-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px 30px 0 0;
+    padding: 46px;
+    color: #FFF;
+    text-shadow: 0 0 1px #000;
+}
+
+header h4{
+    font-size: 23px;
+}
+
+main{
+    margin: 0 46px 46px 46px;
+}
+
+section {
+    padding: 46px 0;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.fa-plus{
+    font-size: 32px;
+    font-style: normal;
+    
+}
+
+/* controls */
+.food-container{
+    display: flex;
+    gap: 30px;
+}
+
+.food-container img{
+    width: 100px;
+}
+
+.food-details{
+    margin-right: auto;
+}
+
+.food-name{
+    font-size: 28px;
+}
+
+.food-ingredients{
+    font-size: 16px;
+    color: #8B8B8B;
+}
+
+.food-price{
+    font-size: 20px;
+}
+
+.add-order-btn{
+    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#3C3C3C;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    
 }
