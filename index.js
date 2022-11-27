@@ -1,4 +1,5 @@
 import { menuArray } from "./data";
+let orderArr = []
 
 document.addEventListener('click', function(e){
     if (e.target.dataset.addorder){
@@ -16,27 +17,29 @@ document.addEventListener('click', function(e){
 })
 
 function handleAddOrderClick(menuId){
-    let orderHtml = ``
     let totalPrice = 0
     const menuObj = menuArray.filter(function(item){
         return item.id == menuId
     })[0]
 
-    orderHtml += `
-    <div class="order-container" id="order-container">
-        <h4 class="food-name">${menuObj.name}</h4>
-        <small class="remove-btn verdana mg-rg-auto" id="remove-btn">remove</small>
-        <p class="food-price">$${menuObj.price}</p>
-    </div>
-    `
-    
-    totalPrice += menuObj.price
+    orderArr.push({name: menuObj.name, price: menuObj.price})
+
+    let orderHtml = ``
+    for (let order of orderArr){
+        orderHtml += `
+        <div class="order-container" id="order-container">
+            <h4 class="food-name">${order.name}</h4>
+            <small class="remove-btn verdana mg-rg-auto" id="remove-btn">remove</small>
+            <p class="food-price">$${order.price}</p>
+        </div>
+        `
+        totalPrice += order.price
+    }
 
     const priceHtml = `
     <h4 class="total-price mg-rg-auto">Total Price:</h4>
     <p class="food-price">$${totalPrice}</p>
     `
-
     document.getElementById("food-order-container").classList.remove("hidden")
     document.getElementById("orders").innerHTML = orderHtml
     document.getElementById("total-price").innerHTML = priceHtml
@@ -103,7 +106,6 @@ function getMenu(){
         ${ thankYouHtml }
 
     `
-
     return displayHtml
 }
 

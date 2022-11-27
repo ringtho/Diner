@@ -61,6 +61,11 @@ main {
     cursor: pointer;
 }
 
+.remove-btn:hover,
+.remove-btn:focus {
+    color: #A01A1C;
+}
+
 button {
     border: none;
     background-color: #16DB99;
@@ -214,4 +219,16 @@ input::placeholder {
 
 .mg-rg-auto {
     margin-right: auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
