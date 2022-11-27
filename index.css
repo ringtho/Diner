@@ -6,6 +6,7 @@ body {
     border-radius: 30px;
     color: #282828;
     font-family: 'Smythe', cursive;
+
 }
 
 *{
@@ -70,6 +71,11 @@ button {
     cursor: pointer;
     border-radius: 2px;
     margin-top: 50px;
+}
+
+button:hover,
+button:focus {
+    background-color: #82F561;
 }
 
 .verdana {
@@ -142,25 +148,46 @@ button {
 }
 
 /* modal */
-.modal {
-    padding: 0 38px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.modal-container {
+    position: fixed;
+    padding: 38px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    width: 600px;
+    display: none; 
 }
 
-.modal h2 {
+.modal {
+    padding: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FFF;
+    border-radius: 4px;
+    box-shadow: 0 0 50px black;
+}
+
+.modal-header {
     text-align: center;
     font-size: 24px;
+    margin: 45px 0;
 }
 
 input {
-    margin: 24px;
+    margin: 24px 0;
     display: block;
     padding: 16px 26px;
     width: 100%;
     border: 1.3px solid #757575;
+    font-size: 20px;
+    border-radius: 4px;  
+}
+
+input::placeholder {
+    color: #757575;
 }
 
 
+/* margin */
 .mg-top-rm {
     margin-top: 0;
 }
