@@ -6,22 +6,21 @@ body {
     border-radius: 30px;
     color: #282828;
     font-family: 'Smythe', cursive;
-    background-color: whitesmoke;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 /* typography */
 
-h2, h4 {
+h2, h4, h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
 h2{
     font-size: 40px;
-}
-
-p {
-    margin-top: 0;
 }
 
 /* layout */
@@ -36,53 +35,72 @@ header {
     text-shadow: 0 0 1px #000;
 }
 
-header h4{
+header h4 {
     font-size: 23px;
 }
 
-main{
+main {
     margin: 0 46px 46px 46px;
 }
 
-section {
+.food-wrapper {
     padding: 46px 0;
     border-bottom: 1px solid #D2D2D2;
 }
 
-.fa-plus{
+.fa-plus {
     font-size: 32px;
     font-style: normal;
     
 }
 
+/* buttons */
+.remove-btn {
+    color: #BBBBBB;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    background-color: #16DB99;
+    color: #FFF;
+    width: 100%;
+    padding: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-top: 50px;
+}
+
+.verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* controls */
-.food-container{
+.food-container {
     display: flex;
     gap: 30px;
 }
 
-.food-container img{
+.food-container img {
     width: 100px;
 }
 
-.food-details{
-    margin-right: auto;
-}
-
-.food-name{
+.food-name, 
+.total-price {
     font-size: 28px;
 }
 
-.food-ingredients{
+.food-ingredients {
     font-size: 16px;
     color: #8B8B8B;
 }
 
-.food-price{
+.food-price {
     font-size: 20px;
 }
 
-.add-order-btn{
+.add-order-btn {
     border: 1px solid #DEDEDE;
     border-radius: 50%;
     width: 50px;
@@ -95,4 +113,58 @@ section {
     cursor: pointer;
     margin-top: 10px;
     
+}
+
+.food-order-container {
+    display: none;
+}
+
+.order-header {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.orders {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #393333;
+}
+
+.order-container, 
+.price-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.price-container {
+    margin-top: 16px;
+}
+
+/* modal */
+.modal {
+    padding: 0 38px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modal h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+input {
+    margin: 24px;
+    display: block;
+    padding: 16px 26px;
+    width: 100%;
+    border: 1.3px solid #757575;
+}
+
+
+.mg-top-rm {
+    margin-top: 0;
+}
+
+.mg-rg-auto {
+    margin-right: auto;
 }

@@ -22,12 +22,12 @@
             <h4>The best burgers and pizzas in town.</h4>
         </header>
         <main>
-            <section>
+            <section class="food-wrapper">
                 <div class="food-container">
                     <img src="/images/pizza.png" alt="pizza">
-                    <div class="food-details">
+                    <div class="food-details mg-rg-auto">
                         <h4 class="food-name">Pizza</h4>
-                        <p class="food-ingredients">pepperoni, mushroom, mozarella</p>
+                        <p class="food-ingredients mg-top-rm">pepperoni, mushroom, mozarella</p>
                         <p class="food-price">$14</p>
                     </div>
                     <div class="add-order-btn">
@@ -35,12 +35,12 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="food-wrapper">
                 <div class="food-container">
                     <img src="/images/burger.png" alt="burger">
-                    <div class="food-details">
+                    <div class="food-details mg-rg-auto">
                         <h4 class="food-name">Hamburger</h4>
-                        <p class="food-ingredients">beef, cheese, lettuce</p>
+                        <p class="food-ingredients mg-top-rm">beef, cheese, lettuce</p>
                         <p class="food-price">$12</p>
                     </div>
                     <div class="add-order-btn">
@@ -48,12 +48,12 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="food-wrapper">
                 <div class="food-container">
                     <img src="/images/beer.png" alt="beer">
-                    <div class="food-details">
+                    <div class="food-details mg-rg-auto">
                         <h4 class="food-name">Beer</h4>
-                        <p class="food-ingredients">grain, hops, yeast, water</p>
+                        <p class="food-ingredients mg-top-rm">grain, hops, yeast, water</p>
                         <p class="food-price">$12</p>
                     </div>
                     <div class="add-order-btn">
@@ -61,7 +61,33 @@
                     </div>
                 </div>
             </section>
+            <section class="food-order-container">
+                <h3 class="order-header">Your Order</h3>
+                <div class="orders">
+                    <div class="order-container">
+                        <h4 class="food-name">Beer</h4>
+                        <small class="remove-btn verdana mg-rg-auto" id="remove-btn">remove</small>
+                        <p class="food-price">$12</p>
+                    </div>
+                    <div class="order-container">
+                        <h4 class="food-name">Hamburger</h4>
+                        <small class="remove-btn verdana mg-rg-auto" id="remove-btn">remove</small>
+                        <p class="food-price">$14</p>
+                    </div>
+                </div>
+                <div class="price-container">
+                    <h4 class="total-price mg-rg-auto">Total Price:</h4>
+                    <p class="food-price">$14</p>
+                </div>
+                <button id="order-btn" class="verdana">Complete order</button>
+            </section>
         </main>
+        <div class="modal">
+            <h2>Enter card details</h2>
+            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter card number">
+            <input type="number" placeholder="Enter CVV">
+        </div>
 	<script src="index.js"></script>
     </body>
 </html>
