@@ -149,6 +149,7 @@ button:focus {
 }
 
 .thank-you {
+    display: none;
     color: #065F46;
     background-color: #ECFDF5;
     text-align: center;
