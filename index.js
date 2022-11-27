@@ -1,8 +1,16 @@
 import { menuArray } from "./data";
 
-const menu = document.getElementById("menu")
+document.addEventListener('click', function(e){
+    if (e.target.dataset.addorder){
+        handleAddOrderClick(e.target.dataset.addorder)
+    }
+})
 
-function renderMenu(){
+function handleAddOrderClick(menuId){
+    console.log("clicked")
+}
+
+function getMenu(){
     let displayHtml = ''
     menuArray.forEach(function(item){
         let menuHtml = `
@@ -14,15 +22,19 @@ function renderMenu(){
                     <p class="food-ingredients mg-top-rm">${item.ingredients}</p>
                     <p class="food-price">$${item.price}</p>
                 </div>
-                <div class="add-order-btn">
-                    <i class="fa-thin fa-plus"></i>
+                <div class="add-order-btn" data-addorder="${item.id}">
+                    <i class="fa-thin fa-plus" data-addorder="${item.id}"></i>
                 </div>
             </div>
         </section>
         `
         displayHtml += menuHtml
     })
-    menu.innerHTML = displayHtml
+    return displayHtml
+}
+
+function renderMenu(){
+    document.getElementById("menu").innerHTML = getMenu()
 }
 
 renderMenu()
