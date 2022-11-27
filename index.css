@@ -78,6 +78,28 @@ button:focus {
     background-color: #82F561;
 }
 
+.add-order-btn {
+    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#3C3C3C;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+
+.add-order-btn:hover,
+.add-order-btn:focus {
+    background-color: #16DB99;
+    color: #FFF;
+    border: none;
+}
+
 .verdana {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -105,21 +127,6 @@ button:focus {
 
 .food-price {
     font-size: 20px;
-}
-
-.add-order-btn {
-    border: 1px solid #DEDEDE;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color:#3C3C3C;
-    font-family: 'Inter', sans-serif;
-    cursor: pointer;
-    margin-top: 10px;
-    
 }
 
 .hidden {
