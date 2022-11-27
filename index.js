@@ -10,6 +10,8 @@ document.addEventListener('click', function(e){
     else if (e.target.id === 'pay-btn'){
         handlePayment()
         
+    } else if (e.target.id === 'remove-btn'){
+        handleRemoveItem()
     }
 })
 
@@ -49,6 +51,10 @@ function handlePayment(){
     document.getElementById('food-order-container').classList.add('hidden')
     document.getElementById('modal').classList.add('hidden')
     document.getElementById('thank-you').classList.remove('hidden')
+}
+
+function handleRemoveItem(){
+    console.log("We shall soon remove an item...")
 }
 
 function getMenu(){
