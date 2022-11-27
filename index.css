@@ -122,8 +122,12 @@ button:focus {
     
 }
 
-.food-order-container {
+.hidden {
     display: none;
+}
+
+.display {
+    display: block;
 }
 
 .order-header {
@@ -149,7 +153,6 @@ button:focus {
 }
 
 .thank-you {
-    display: none;
     color: #065F46;
     background-color: #ECFDF5;
     text-align: center;
@@ -166,7 +169,6 @@ button:focus {
     left: 50%;
     transform: translate(-50%,-60%);
     width: 600px;
-    display: none; 
 }
 
 .modal {

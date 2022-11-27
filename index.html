@@ -22,79 +22,15 @@
             <h4>The best burgers and pizzas in town.</h4>
         </header>
         <main id="menu">
-            <!-- <section class="food-wrapper" id="food-wrapper">
-                <div class="food-container">
-                    <img src="/images/pizza.png" alt="pizza">
-                    <div class="food-details mg-rg-auto">
-                        <h4 class="food-name">Pizza</h4>
-                        <p class="food-ingredients mg-top-rm">pepperoni, mushroom, mozarella</p>
-                        <p class="food-price">$14</p>
-                    </div>
-                    <div class="add-order-btn">
-                        <i class="fa-thin fa-plus"></i>
-                    </div>
-                </div>
-            </section>
-            <section class="food-wrapper">
-                <div class="food-container">
-                    <img src="/images/burger.png" alt="burger">
-                    <div class="food-details mg-rg-auto">
-                        <h4 class="food-name">Hamburger</h4>
-                        <p class="food-ingredients mg-top-rm">beef, cheese, lettuce</p>
-                        <p class="food-price">$12</p>
-                    </div>
-                    <div class="add-order-btn">
-                        <i class="fa-thin fa-plus"></i>
-                    </div>
-                </div>
-            </section>
-            <section class="food-wrapper">
-                <div class="food-container">
-                    <img src="/images/beer.png" alt="beer">
-                    <div class="food-details mg-rg-auto">
-                        <h4 class="food-name">Beer</h4>
-                        <p class="food-ingredients mg-top-rm">grain, hops, yeast, water</p>
-                        <p class="food-price">$12</p>
-                    </div>
-                    <div class="add-order-btn">
-                        <i class="fa-thin fa-plus"></i>
-                    </div>
-                </div>
-            </section> -->
-            <section class="food-order-container">
-                <h3 class="order-header">Your Order</h3>
-                <div class="orders" id="orders">
-                    <div class="order-container">
-                        <h4 class="food-name">Beer</h4>
-                        <small class="remove-btn verdana mg-rg-auto" id="remove-btn">remove</small>
-                        <p class="food-price">$12</p>
-                    </div>
-                    <div class="order-container">
-                        <h4 class="food-name">Hamburger</h4>
-                        <small class="remove-btn verdana mg-rg-auto" id="remove-btn">remove</small>
-                        <p class="food-price">$14</p>
-                    </div>
-                </div>
-                <div class="price-container">
-                    <h4 class="total-price mg-rg-auto">Total Price:</h4>
-                    <p class="food-price">$14</p>
-                </div>
-                <button id="order-btn" class="verdana">Complete order</button>
-            </section>
-            <section>
-                <div class="thank-you">
-                    <h4>Thanks James! Your order is on its way!</h4>
-                </div>
-            </section>
         </main>
-        <div class="modal-container">
-            <div class="modal">
+        <div class="modal-container hidden" id="modal">
+            <form class="modal" action="#">
                 <h2 class="modal-header">Enter card details</h2>
-                <input type="text" placeholder="Enter your name">
-                <input type="number" placeholder="Enter card number">
-                <input type="number" placeholder="Enter CVV">
-                <button>Pay</button>
-            </div>
+                <input type="text" placeholder="Enter your name" required>
+                <input type="number" placeholder="Enter card number" required>
+                <input type="number" placeholder="Enter CVV" required maxlength="3" minlength="3">
+                <button id="pay-btn" type="button">Pay</button>
+            </form>
         </div>
 	<script src="index.js" type="module"></script>
     </body>
