@@ -82,7 +82,7 @@ function getMenu(){
         orderIter += `
         <div class="order-container" id="order-container">
             <h4 class="food-name">${order.name}</h4>
-            <small class="remove-btn verdana mg-rg-auto" data-removeorder="${order.id}" id="remove-btn">remove</small>
+            <small class="remove-btn verdana mg-rg-auto" data-removeorder="${order.uuid}" id="remove-btn">remove</small>
             <p class="food-price">$${order.price}</p>
         </div>
         `
