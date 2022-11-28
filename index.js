@@ -5,7 +5,6 @@ let orderArr = []
 renderMenu()
 
 const orderContainer = document.getElementById("food-order-container")
-console.log(orderContainer)
 
 document.addEventListener('click', function(e){
     if (e.target.dataset.addorder){
