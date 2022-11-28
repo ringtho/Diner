@@ -2,6 +2,11 @@ import { menuArray } from "./data";
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 let orderArr = []
 
+renderMenu()
+
+const orderContainer = document.getElementById("food-order-container")
+console.log(orderContainer)
+
 document.addEventListener('click', function(e){
     if (e.target.dataset.addorder){
         handleAddOrderClick(e.target.dataset.addorder)
@@ -46,7 +51,7 @@ function handlePayment(){
 
 function handleRemoveItem(id){
     const orders = orderArr.filter(function(order){
-        return order.id != id
+        return order.uuid != id
     })
     orderArr = orders
     renderMenu()
@@ -124,4 +129,4 @@ function renderMenu(){
     document.getElementById("menu").innerHTML = getMenu()
 }
 
-renderMenu()
+
