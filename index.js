@@ -4,8 +4,6 @@ let orderArr = []
 
 renderMenu()
 
-const orderContainer = document.getElementById("food-order-container")
-
 document.addEventListener('click', function(e){
     if (e.target.dataset.addorder){
         handleAddOrderClick(e.target.dataset.addorder)
@@ -40,6 +38,7 @@ function handleAddOrderClick(menuId){
 
 function handleCompleteOrder(){
     document.getElementById('modal').classList.remove('hidden')
+    orderArr = []
 }
 
 function handlePayment(){
@@ -85,7 +84,7 @@ function getMenu(){
     orderArr.forEach(function(order){
         orderIter += `
         <div class="order-container" id="order-container">
-            <h4 class="food-name">${order.name}</h4>
+            <h4 class="food-name">${order.name} ()</h4>
             <small class="remove-btn verdana mg-rg-auto" data-removeorder="${order.uuid}" id="remove-btn">remove</small>
             <p class="food-price">$${order.price}</p>
         </div>
