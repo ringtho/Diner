@@ -110,7 +110,7 @@ function getMenu(){
     const thankYouHtml = `
     <section class="hidden" id="thank-you">
         <div class="thank-you">
-            <h4>Thanks James! Your order is on its way!</h4>
+            <h4>Thanks ${document.getElementById('name').value}! Your order is on its way!</h4>
         </div>
     </section>
     `
